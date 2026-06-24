@@ -1,0 +1,36 @@
+# Telegram
+BOT_TOKEN=123456:TON_TOKEN_BOTFATHER
+ADMIN_IDS=123456789,987654321
+SUPPORT_USERNAME=@mrzephyx
+
+# Bot
+SHOP_NAME=MRSHOP
+DATABASE_PATH=shop.db
+PRODUCTS_FILE=products.json
+CHECK_DEPOSITS_EVERY_SECONDS=45
+MIN_DEPOSIT_EUR=2
+DEPOSIT_EXPIRATION_HOURS=24
+
+# Dépôts crypto: pas de withdraw dans ce bot.
+# Important: mets des adresses de wallet que TU contrôles. Ne mets jamais ta seed phrase 12 mots ici.
+ENABLED_NETWORKS=LTC,SOL
+LTC_ADDRESS=LTC_ADDRESS_ICI
+SOL_ADDRESS=SOL_ADDRESS_ICI
+LTC_CONFIRMATIONS=2
+LTC_EUR_FALLBACK=75
+SOL_EUR_FALLBACK=130
+SOL_RPC_URL=https://api.mainnet-beta.solana.com
+
+# Antistock / astck
+# true = stock réel via API Antistock. false = test local via local_stock/<product_id>.txt
+ANTISTOCK_ENABLED=false
+ANTISTOCK_BASE_URL=https://business-api.antistock.io
+ANTISTOCK_API_TOKEN=TON_SECRET_TOKEN_ANTISTOCK
+ANTISTOCK_SHOP_ID=TON_SHOP_ID_UUID
+
+# Endpoint confirmé par la doc publique: /v1/dash/shops/{shopId}/warehouses/{warehouseId}/stock/raw
+# Pour retirer 1 stock, Antistock expose delete-stock mais le body exact dépend de leur OpenAPI.
+# Essaie d'abord avec id_list. Si ça ne marche pas, adapte avec custom template.
+ANTISTOCK_DELETE_STRATEGY=id_list
+# Options: id_list | stock_ids | raw_lines | custom
+ANTISTOCK_DELETE_CUSTOM_TEMPLATE={"ids":["{{id}}"]}
