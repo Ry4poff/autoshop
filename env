@@ -1,6 +1,6 @@
-# Telegram
-BOT_TOKEN=123456:TON_TOKEN_BOTFATHER
-ADMIN_IDS=123456789,987654321
+﻿# Telegram
+BOT_TOKEN=8642610624:AAHif2BBbDMTxHZUL5ILQ9q0mOKdDU_70YM
+ADMIN_IDS=
 SUPPORT_USERNAME=@mrzephyx
 
 # Bot
@@ -23,10 +23,10 @@ SOL_RPC_URL=https://api.mainnet-beta.solana.com
 
 # Antistock / astck
 # true = stock réel via API Antistock. false = test local via local_stock/<product_id>.txt
-ANTISTOCK_ENABLED=false
+ANTISTOCK_ENABLED=true
 ANTISTOCK_BASE_URL=https://business-api.antistock.io
-ANTISTOCK_API_TOKEN=TON_SECRET_TOKEN_ANTISTOCK
-ANTISTOCK_SHOP_ID=TON_SHOP_ID_UUID
+ANTISTOCK_API_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE3Mzc4ODAxIiwiY3VzdG9tZXIiOiJGYWxzZSIsImp0aSI6IjZlNWVmZjU2LTgyODgtNGU3Mi04MTY3LTg0NWIwZjg0Y2QyNyIsImV4cCI6MjA5Nzk0MTA1Nn0.7tEbewrRocMXrUM_Vy6Hsptn--C5wiAt2WcpmQ9cQh0
+ANTISTOCK_SHOP_ID=ef65c2ed-7f84-4dbe-b276-6fc08fa6c8d7
 
 # Endpoint confirmé par la doc publique: /v1/dash/shops/{shopId}/warehouses/{warehouseId}/stock/raw
 # Pour retirer 1 stock, Antistock expose delete-stock mais le body exact dépend de leur OpenAPI.
