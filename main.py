@@ -164,6 +164,10 @@ class Product:
 
 
 def load_products(config: Config) -> List[Product]:
+    # Skip loading products.json when using Antistock API
+    if config.antistock_enabled:
+        return []
+    
     path = Path(config.products_file)
     if not path.exists():
         raise ConfigError(f"Fichier produits introuvable: {config.products_file}")
